@@ -13,8 +13,8 @@ jobs:
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
-          name: Download dependencies
-          command: ./gradlew androidDependencies
+          
+          
           command: ./gradlew assembleDebug --stacktrace
           command: ./gradlew assembleDebug --debug
 
