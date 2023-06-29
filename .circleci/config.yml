@@ -9,7 +9,8 @@ jobs:
   build:
     executor: android
     steps:
-      - checkout:
+
+
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
 
@@ -20,8 +21,8 @@ jobs:
           
           name: download dependencies 
         command:  ./gradlew andriodDependencies
-
-        steps:
+build
+  steps:
   - checkout:
   - run:
       name: Build Project
