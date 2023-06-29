@@ -21,6 +21,13 @@ jobs:
           name: download dependencies 
         command:  ./gradlew andriodDependencies
 
+        steps:
+  - checkout
+  - run:
+      name: Build Project
+      command: ./gradlew build
+
+
 
       - save_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
