@@ -15,8 +15,8 @@ jobs:
       - run:
           
           
-          command: ./gradlew assembleDebug --stacktrace
-          command: ./gradlew assembleDebug --debug
+        command:  ./gradlew assembleDebug --stacktrace
+
 
       - save_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
