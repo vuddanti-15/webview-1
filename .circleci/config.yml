@@ -22,7 +22,7 @@ jobs:
         command:  ./gradlew andriodDependencies
 
         steps:
-  - checkout
+  - checkout:
   - run:
       name: Build Project
       command: ./gradlew build
